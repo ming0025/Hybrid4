@@ -2,7 +2,8 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 void main() async {
-  const url = 'https://random-data-api.com/api/users/random_user?size=10';
+  const size = 10;
+  const url = 'https://random-data-api.com/api/users/random_user?size=${size}';
   try {
     final response = await http.get(Uri.parse(url));
     if (response.statusCode == 200) {
